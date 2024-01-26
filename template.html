@@ -1,0 +1,250 @@
+<!doctype html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Simple Transactional Email</title>
+    <style media="all" type="text/css">
+      @media all {
+        .btn-primary table td:hover {
+          background-color: #ec0867 !important;
+        }
+        .btn-primary a:hover {
+          background-color: #ec0867 !important;
+          border-color: #ec0867 !important;
+        }
+      }
+      @media only screen and (max-width: 640px) {
+        .main p,
+        .main td,
+        .main span {
+          font-size: 16px !important;
+        }
+        .wrapper {
+          padding: 8px !important;
+        }
+        .content {
+          padding: 0 !important;
+        }
+        .container {
+          padding: 0 !important;
+          padding-top: 8px !important;
+          width: 100% !important;
+        }
+        .main {
+          border-left-width: 0 !important;
+          border-radius: 0 !important;
+          border-right-width: 0 !important;
+        }
+        .btn table {
+          max-width: 100% !important;
+          width: 100% !important;
+        }
+        .btn a {
+          font-size: 16px !important;
+          max-width: 100% !important;
+          width: 100% !important;
+        }
+      }
+      @media all {
+        .ExternalClass {
+          width: 100%;
+        }
+        .ExternalClass,
+        .ExternalClass p,
+        .ExternalClass span,
+        .ExternalClass font,
+        .ExternalClass td,
+        .ExternalClass div {
+          line-height: 100%;
+        }
+        .apple-link a {
+          color: inherit !important;
+          font-family: inherit !important;
+          font-size: inherit !important;
+          font-weight: inherit !important;
+          line-height: inherit !important;
+          text-decoration: none !important;
+        }
+        #MessageViewBody a {
+          color: inherit;
+          text-decoration: none;
+          font-size: inherit;
+          font-family: inherit;
+          font-weight: inherit;
+          line-height: inherit;
+        }
+      }
+    </style>
+  </head>
+  <body style="font-family: Helvetica, sans-serif; -webkit-font-smoothing: antialiased; font-size: 16px; line-height: 1.3; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; background-color: #f4f5f6; margin: 0; padding: 0;">
+    <table role="presentation" border="0" cellpadding="0" cellspacing="0" class="body" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #f4f5f6; width: 100%;" width="100%" bgcolor="#f4f5f6">
+      <tr>
+        <td style="font-family: Helvetica, sans-serif; font-size: 16px; vertical-align: top;" valign="top">&nbsp;</td>
+        <td class="container" style="font-family: Helvetica, sans-serif; font-size: 16px; vertical-align: top; max-width: 600px; padding: 0; padding-top: 24px; width: 600px; margin: 0 auto;" width="600" valign="top">
+          <img alt="logo" width="100%" src="cid:logo">
+          <div class="content" style="box-sizing: border-box; display: block; margin: 0 auto; max-width: 600px; padding: 0;">
+            <!-- START CENTERED WHITE CONTAINER -->
+            <table role="presentation" border="0" cellpadding="0" cellspacing="0" class="main" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; background: #ffffff; border: 1px solid #eaebed; border-radius: 5px; width: 100%;" width="100%">
+              <!-- START MAIN CONTENT AREA -->
+              <tr>
+                <td class="wrapper" style="font-family: Helvetica, sans-serif; font-size: 16px; vertical-align: top; box-sizing: border-box; padding: 24px;" valign="top">
+                  <? if (paragraph === 'welcome') { ?>
+                    <p style="font-family: Helvetica, sans-serif; font-size: 16px; font-weight: normal; margin: 0; margin-bottom: 16px;">
+                      Hi <?= recipientFirstName ?>,<br><br>
+
+                      Welcome to <em>valuetales</em>!<br><br>
+
+                      <em>valuetales</em> is an email service that will ask you to respond to a weekly question prompt over the course of the next year. These questions are all personally selected by your favorite person <?= senderFirstName ?> <?= senderLastName ?>! At the end of the year, all your questions and answers will be bundled up into a book that you can share with your friends and family.<br><br>
+
+                      Your first question will come next week!<br><br>
+
+                      Cheers,<br>
+
+                      - The <em>valuetales</em> team on behalf of <?= senderFirstName ?> <?= senderLastName ?>.
+                    </p>
+                  <? } else if (paragraph === 'completed') { ?>
+                    <p style="font-family: Helvetica, sans-serif; font-size: 16px; font-weight: normal; margin: 0; margin-bottom: 16px;">
+                      Hi <?= recipientFirstName ?>,<br><br>
+        
+                      Congratulations, you did it!<br><br> 
+                      
+                      Thank you for completing all those questions this year! Hopefully it wasn't too overwhelming.<br><br>
+                      
+                      There is no question this week. This is just a reminder that you are able to go back and edit any of your previous responses from throughout the year. When compiling your book full of stories, <em>valuetales</em> will use the last response in each weekly question's email thread.<br><br>
+                
+                      You have one week to make any changes before your book is compiled and sent to you as a PDF. If you want to make any adjustments after that just reach out to your favorite person <?= senderFirstName ?> <?= senderLastName ?>.<br><br>
+                
+                      Cheers,<br>
+                      - The <em>valuetales</em> team on behalf of <?= senderFirstName ?> <?= senderLastName ?>.
+                    </p>
+                  <? } else if (paragraph === 'question') { ?>
+                    <p style="font-family: Helvetica, sans-serif; font-size: 16px; font-weight: normal; margin: 0; margin-bottom: 16px;">
+                      Hi <?= recipientFirstName ?>,<br><br>
+
+                      This week, <?= senderFirstName ?> <?= senderLastName ?> would like you to answer the following question:<br><br>
+                
+                      <b><?= question ?></b><br><br>
+                
+                      Reply to this email with your story. You're welcome to attach a photo with your reply as well. <em>valuetales</em> will use the latest response in this question's email thread when building your book at the end of the year. So you can take your time answering this question or make multiple revisions throughout the year.<br><br>
+
+                      Looking forward to your response!<br><br>
+                
+                      Cheers,<br>
+                      - The <em>valuetales</em> team on behalf of <?= senderFirstName ?> <?= senderLastName ?>.
+                    </p>
+                  <? } else if (paragraph === 'reminder') { ?>
+                    <p style="font-family: Helvetica, sans-serif; font-size: 16px; font-weight: normal; margin: 0; margin-bottom: 16px;">
+                      Hi <?= senderFirstName ?>,<br><br>
+
+                      This is a courtesy reminder from <em>valuetales</em>.<br><br>
+
+                      It's been a whole year and your book for <?= recipientFirstName ?> <?= recipientLastName ?> is finally ready to view as a <a href="<?= googleDocLink ?>">Google Doc</a>.<br><br>
+
+                      A notice has also been sent out to let <?= recipientFirstName ?> <?= recipientLastName ?> know that they have one week to make any adjustments to any of their email responses. This is a good time to look at the generated <a href="<?= googleDocLink ?>">Google Doc</a> and suggest any edits that they could make.<br><br>
+                      
+                      Due to the open-source nature of this project there may also be some issues with the <a href="<?= googleDocLink ?>">Google Doc</a> that require code fixes or manual fixes from your end during this time.<br><br> 
+
+                      Another thing to remind you of is the parameters <b>coverPhotoWeekOverride</b> and <b>googleDocLinkOverride</b>.<br><br>
+
+                      <b>coverPhotoWeekOverride</b> can be setup to select a random image or a specific weeks image for the cover photo.<br><br>
+
+                      <b>googleDocLinkOverride</b> can be set to three options. Setting this value to "auto" will automatically build and send the book without your review. Setting this value to "skip" will skip sending the book to your recipient next week and leave this process for you to do manually. Setting this value to to a Google Doc link will use that Google Doc instead of the auto-generated one. This is helpful incase you need to make any manual adjustments to the Google Doc.<br><br>
+
+                      Cheers,<br>
+
+                      - The <em>valuetales</em> team on behalf of <?= senderFirstName ?> <?= senderLastName ?>.
+                    </p>
+                  <? } else if (paragraph === 'book') { ?>
+                    <p style="font-family: Helvetica, sans-serif; font-size: 16px; font-weight: normal; margin: 0; margin-bottom: 16px;">
+                      Hi <?= recipientFirstName ?>,<br><br>
+
+                      Your <em>valuetales</em> book is finished and ready to view. It has been attached to this email as a PDF.<br><br>
+
+                      If you need any further assistance just reach out to your favorite person <?= senderFirstName ?> <?= senderLastName ?>. If you would like a physical book with your stories they can handle purchasing the book for you.<br><br>
+
+                      Cheers,<br>
+
+                      - The <em>valuetales</em> team on behalf of <?= senderFirstName ?> <?= senderLastName ?>.
+                    </p>
+                  <? } else if (paragraph === 'buy') { ?>
+                    <p style="font-family: Helvetica, sans-serif; font-size: 16px; font-weight: normal; margin: 0; margin-bottom: 16px;">
+                      Hi <?= senderFirstName ?>,<br><br>
+
+                      Your <em>valuetales</em> book has been sent out to <?= recipientFirstName ?> <?= recipientLastName ?> as a PDF. This PDF has also been attached to this email for your reference.<br><br>
+
+                      If you or your recipient would like a physical copy of this book you will need to find a custom book printing service that is capable of printing 5.5 inch x 8.5 inch books.<br><br>
+
+                      At the time of this script's development, <a href="https://press.barnesandnoble.com/print-on-demand">Barnes & Nobles</a> has a service that can provide this.<br><br>
+
+                      Cheers,<br>
+
+                      - The <em>valuetales</em> team on behalf of <?= senderFirstName ?> <?= senderLastName ?>.
+                    </p>
+                  <? } else if (paragraph === 'skip') { ?>
+                    <p style="font-family: Helvetica, sans-serif; font-size: 16px; font-weight: normal; margin: 0; margin-bottom: 16px;">
+                      Hi <?= senderFirstName ?>,<br><br>
+
+                      This is just a reminder that you have chosen to skip sending your <em>valuetales</em> book to <?= recipientFirstName ?> <?= recipientLastName ?> as a PDF this week.<br><br>
+
+                      Your recipient is expecting a book to be sent as a PDF this week. Consider reaching out to them to let them know the status of their book.<br><br>
+
+                      Cheers,<br>
+
+                      - The <em>valuetales</em> team on behalf of <?= senderFirstName ?> <?= senderLastName ?>.
+                    </p>
+                  <? } else if (paragraph === 'invalid') { ?>
+                    <p style="font-family: Helvetica, sans-serif; font-size: 16px; font-weight: normal; margin: 0; margin-bottom: 16px;">
+                      Hi <?= senderFirstName ?>,<br><br>
+
+                      This week <em>valuetales</em> was scheduled to send your <em>valuetales</em> book to <?= recipientFirstName ?> <?= recipientLastName ?> as a PDF.<br><br>
+
+                      You entered an invalid value for the parameter <b>googleDocLinkOverride</b>.<br><br>
+
+                      <b>googleDocLinkOverride</b> can be set to three options. Setting this value to "auto" will automatically build and send the book without your review. Setting this value to "skip" will skip sending the book to your recipient and leave this process for you to do manually. Setting this value to to a Google Doc link will use that Google Doc instead of the auto-generated one.<br><br>
+
+                      A possible scenario is that you entered an invalid Google Doc link that either does not exist or is not in the correct format. Here's an example of a Google Doc link in the correct format:<br><br>
+                      
+                      "https://docs.google.com/document/d/1234567890abcdefghijklmnopqrstuvwxyz_a1b2c3/edit".<br><br>
+
+                      Fix the invalid value for <b>googleDocLinkOverride</b> and manually rerun the function <b>askQuestions()</b> within the week to send your <em>valuetales</em> book to <?= recipientFirstName ?> <?= recipientLastName ?> as a PDF.<br><br>
+
+                      Cheers,<br>
+
+                      - The <em>valuetales</em> team on behalf of <?= senderFirstName ?> <?= senderLastName ?>.
+                    </p>
+                  <? } else if (paragraph === 'disable') { ?>
+                    <p style="font-family: Helvetica, sans-serif; font-size: 16px; font-weight: normal; margin: 0; margin-bottom: 16px;">
+                      Hi <?= senderFirstName ?>,<br><br>
+
+                      This is a reminder to disable the <em>valuetales</em> service as it has come to a completion.<br><br>
+
+                      Turn off any weekly triggers set in your Apps Script project and disable this third-party apps access to your Google Account.<br><br>
+
+                      Cheers,<br>
+
+                      - The <em>valuetales</em> team on behalf of <?= senderFirstName ?> <?= senderLastName ?>.
+                    </p>
+                  <? } ?>
+                </td>
+              </tr>
+              <!-- END MAIN CONTENT AREA -->
+              </table>
+            <!-- START FOOTER -->
+            <div class="footer" style="clear: both; padding-top: 24px; padding-bottom: 24px; text-align: center; width: 100%;">
+              <table role="presentation" border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%;" width="100%">
+                <tr>
+                  <td class="content-block powered-by" style="font-family: Helvetica, sans-serif; vertical-align: top; color: #9a9ea6; font-size: 16px; text-align: center;" valign="top" align="center">
+                    A <a href="https://github.com/johnprovazek/valuetales" style="color: #9a9ea6; font-size: 16px; text-align: center; text-decoration: underline;">open-source</a> project.
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <!-- END FOOTER -->
+            <!-- END CENTERED WHITE CONTAINER --></div>
+        </td>
+        <td style="font-family: Helvetica, sans-serif; font-size: 16px; vertical-align: top;" valign="top">&nbsp;</td>
+      </tr>
+    </table>
+  </body>
+</html>
