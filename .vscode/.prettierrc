@@ -1,0 +1,16 @@
+{
+  "overrides": [
+    {
+      "files": "*.gs",
+      "options": {
+        "printWidth": 120
+      }
+    },
+    {
+      "files": "*.html",
+      "options": {
+        "printWidth": 120
+      }
+    }
+  ]
+}

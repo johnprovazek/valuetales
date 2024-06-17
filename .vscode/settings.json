@@ -1,0 +1,7 @@
+{
+  "prettier.configPath": ".vscode/.prettierrc",
+  "cSpell.words": [
+    "regexes",
+    "Valuetales"
+  ]
+}
