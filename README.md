@@ -4,7 +4,15 @@
 
 This project was created as an open-source and cheaper alternative to the service [StoryWorth](https://welcome.storyworth.com/). [StoryWorth](https://welcome.storyworth.com/) is a service that sends a loved-one weekly email question prompts throughout the course of the year. At the end of the year [StoryWorth](https://welcome.storyworth.com/) bundles up the questions and responses into a book and sends you that book.
 
-This project utilizes the products Gmail, Google Docs, and the [Google Apps Script platform](https://developers.google.com/apps-script) to orchestrate this alternative to the service [StoryWorth](https://welcome.storyworth.com/). This project handles sending loved-one weekly emails. This project also handles compiling the questions and responses into a Google Doc at the end of the year. You would then need to use a third-party service such as [Barnes and Noble](https://press.barnesandnoble.com/print-on-demand) to print out this Google Doc as a physical book. This project assumes some JavaScript coding knowledge and experience with regular expressions on part of the user.
+This project utilizes the products Gmail, Google Docs, and the [Google Apps Script platform](https://developers.google.com/apps-script) to orchestrate this alternative to the service [StoryWorth](https://welcome.storyworth.com/). This project handles sending loved-ones weekly emails. This project also handles compiling the questions and responses into a Google Doc at the end of the year. You would then need to use a third-party service such as [Barnes and Noble](https://press.barnesandnoble.com/print-on-demand) to print out this Google Doc as a physical book. This project assumes some JavaScript coding knowledge and experience with regular expressions on part of the user.
+
+Built using Google Apps Script.
+
+<div align="center">
+  <picture>
+    <img src="https://github.com/user-attachments/assets/c058395e-7cd1-46ad-83e9-e6523d857d5d" width="830px">
+  </picture>
+</div>
 
 ## Installation
 
