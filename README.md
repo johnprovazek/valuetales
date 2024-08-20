@@ -10,7 +10,7 @@ Built using Google Apps Script.
 
 <div align="center">
   <picture>
-    <img src="https://github.com/user-attachments/assets/c058395e-7cd1-46ad-83e9-e6523d857d5d" width="830px">
+    <img src="https://repository-images.githubusercontent.com/748037446/3c8c2418-113e-4bb0-934b-2328f3986f22" width="830px">
   </picture>
 </div>
 
