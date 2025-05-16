@@ -175,17 +175,16 @@
                     Welcome to <em>valuetales</em>!<br /><br />
 
                     <em>valuetales</em> is an email service that will ask you to respond to a weekly question prompt
-                    over the course of the next year. These questions are all personally selected by your favorite
-                    person
+                    over the course of the next year. These questions have all been personally selected by
                     <?= senderFirstName ?>
-                    <?= senderLastName ?>! At the end of the year, all your questions and answers will be bundled up
+                    <?= senderLastName ?>. At the end of the year, all your questions and answers will be bundled up
                     into a book that you can share with your friends and family.<br /><br />
 
                     Your first question will come next week!<br /><br />
 
                     Cheers,<br />
 
-                    - The <em>valuetales</em> team on behalf of
+                    - <em>valuetales</em> on behalf of
                     <?= senderFirstName ?>
                     <?= senderLastName ?>.
                   </p>
@@ -202,21 +201,19 @@
                     Hi
                     <?= recipientFirstName ?>,<br /><br />
 
-                    Congratulations, you did it!<br /><br />
-
-                    Thank you for completing all those questions this year! Hopefully it wasn't too overwhelming.<br /><br />
+                    Congratulations, you did it! Hopefully it wasn't too overwhelming.<br /><br />
 
                     There is no question this week. This is just a reminder that you are able to go back and edit any of
-                    your previous responses from throughout the year. When compiling your book full of stories,
-                    <em>valuetales</em> will use the last response in each weekly question's email thread.<br /><br />
+                    your previous responses from throughout the year. You have one week to make any changes to your
+                    responses before your book is created and shared with you digitally.<br /><br />
 
-                    You have one week to make any changes before your book is compiled and sent to you as a PDF. If you
-                    want to make any adjustments after that just reach out to your favorite person
+                    If you would like a physical book you can reach out to
                     <?= senderFirstName ?>
-                    <?= senderLastName ?>.<br /><br />
+                    <?= senderLastName ?>. They can handle purchasing this book for you.<br /><br />
 
                     Cheers,<br />
-                    - The <em>valuetales</em> team on behalf of
+
+                    - <em>valuetales</em> on behalf of
                     <?= senderFirstName ?>
                     <?= senderLastName ?>.
                   </p>
@@ -233,22 +230,19 @@
                     Hi
                     <?= recipientFirstName ?>,<br /><br />
 
-                    This week,
+                    This week
                     <?= senderFirstName ?>
                     <?= senderLastName ?>
                     would like you to answer the following question:<br /><br />
 
                     <b><?= question ?></b><br /><br />
 
-                    Reply to this email with your story. You're welcome to attach a photo with your reply as well.
-                    <em>valuetales</em> will use the latest response in this question's email thread when building your
-                    book at the end of the year. So you can take your time answering this question or make multiple
-                    revisions throughout the year.<br /><br />
-
-                    Looking forward to your response!<br /><br />
+                    Use this <a href="<?= googleFormLink ?>">Google Form</a> to respond to the question. Looking forward
+                    to your response!<br /><br />
 
                     Cheers,<br />
-                    - The <em>valuetales</em> team on behalf of
+
+                    - <em>valuetales</em> on behalf of
                     <?= senderFirstName ?>
                     <?= senderLastName ?>.
                   </p>
@@ -270,34 +264,36 @@
                     It's been a whole year and your book for
                     <?= recipientFirstName ?>
                     <?= recipientLastName ?>
-                    is finally ready to view as a <a href="<?= googleDocLink ?>">Google Doc</a>.<br /><br />
+                    is ready to view as a <a href="<?= googleDocLink ?>">Google Doc</a>.<br /><br />
 
                     A notice has also been sent out to let
                     <?= recipientFirstName ?>
                     <?= recipientLastName ?>
-                    know that they have one week to make any adjustments to any of their email responses. This is a good
-                    time to look at the generated <a href="<?= googleDocLink ?>">Google Doc</a> and suggest any edits
-                    that they could make.<br /><br />
+                    know that they have one week to make any adjustments to any of their responses. This is a good time
+                    to look over the auto generated <a href="<?= googleDocLink ?>">Google Doc</a> and suggest any edits
+                    that
+                    <?= recipientFirstName ?>
+                    <?= recipientLastName ?>
+                    could make.<br /><br />
 
-                    Due to the open-source nature of this project there may also be some issues with the
-                    <a href="<?= googleDocLink ?>">Google Doc</a> that require code fixes or manual fixes from your end
-                    during this time.<br /><br />
-
-                    Another thing to remind you of is the parameters <b>coverPhotoWeekOverride</b> and
+                    This is also a good time to remind you of the recipient parameters <b>coverPhoto</b> and
                     <b>googleDocLinkOverride</b>.<br /><br />
 
-                    <b>coverPhotoWeekOverride</b> can be setup to select a random image or a specific weeks image for
-                    the cover photo.<br /><br />
+                    <b>coverPhoto</b>: Handles selecting the cover photo for the Google Doc. Setting this to a value
+                    between <em>1 - 50</em> will use an image from the corresponding week as the cover photo. Setting
+                    this value to <em>null</em> will use a random image for the cover photo. If the recipient hasn't
+                    responded with images then there won't be an image used on the cover page.<br /><br />
 
-                    <b>googleDocLinkOverride</b> can be set to three options. Setting this value to "auto" will
-                    automatically build and send the book without your review. Setting this value to "skip" will skip
-                    sending the book to your recipient next week and leave this process for you to do manually. Setting
-                    this value to to a Google Doc link will use that Google Doc instead of the auto-generated one. This
-                    is helpful incase you need to make any manual adjustments to the Google Doc.<br /><br />
+                    <b>googleDocLinkOverride</b>: Handles overriding the Google Doc at the end of the year. If a valid
+                    Google Doc link is supplied, this Google Doc will be used instead of the auto generated one. This is
+                    helpful if you want to manually make any edits before sending the Google Doc to your recipient. To
+                    use the auto generated option instead set this value to null.<br /><br />
+
+                    Here is a link to the <a href="https://script.google.com/">Apps Script Platform</a>.<br /><br />
 
                     Cheers,<br />
 
-                    - The <em>valuetales</em> team on behalf of
+                    - <em>valuetales</em> on behalf of
                     <?= senderFirstName ?>
                     <?= senderLastName ?>.
                   </p>
@@ -314,17 +310,22 @@
                     Hi
                     <?= recipientFirstName ?>,<br /><br />
 
-                    Your <em>valuetales</em> book is finished and ready to view. It has been attached to this email as a
-                    PDF.<br /><br />
+                    Your <em>valuetales</em> book is finished and ready to
+                    <? if (bookLink !== null) { ?>
+                    <a href="<?= bookLink ?>">view</a>.
+                    <? } else { ?>
+                    view. It has been attached to this email as a PDF.
+                    <? } ?>
+                    <br /><br />
 
-                    If you need any further assistance just reach out to your favorite person
+                    If you need any further assistance just reach out to
                     <?= senderFirstName ?>
                     <?= senderLastName ?>. If you would like a physical book with your stories they can handle
                     purchasing the book for you.<br /><br />
 
                     Cheers,<br />
 
-                    - The <em>valuetales</em> team on behalf of
+                    - <em>valuetales</em> on behalf of
                     <?= senderFirstName ?>
                     <?= senderLastName ?>.
                   </p>
@@ -344,45 +345,23 @@
                     Your <em>valuetales</em> book has been sent out to
                     <?= recipientFirstName ?>
                     <?= recipientLastName ?>
-                    as a PDF. This PDF has also been attached to this email for your reference.<br /><br />
+                    as a
+                    <? if (bookLink !== null) { ?>
+                    <a href="<?= bookLink ?>">PDF</a>.
+                    <? } else { ?>
+                    PDF. This PDF has also been attached to this email for your reference.
+                    <? } ?>
+                    <br /><br />
 
                     If you or your recipient would like a physical copy of this book you will need to find a custom book
                     printing service that is capable of printing 5.5 inch x 8.5 inch books.<br /><br />
 
-                    At the time of this script's development,
-                    <a href="https://press.barnesandnoble.com/print-on-demand">Barnes & Nobles</a> has a service that
-                    can provide this.<br /><br />
+                    <a href="https://press.barnesandnoble.com/print-on-demand">Barnes &#38; Nobles</a> may be a possible
+                    provider for this service.<br /><br />
 
                     Cheers,<br />
 
-                    - The <em>valuetales</em> team on behalf of
-                    <?= senderFirstName ?>
-                    <?= senderLastName ?>.
-                  </p>
-                  <? } else if (paragraph === 'skip') { ?>
-                  <p
-                    style="
-                      font-family: Helvetica, sans-serif;
-                      font-size: 16px;
-                      font-weight: normal;
-                      margin: 0;
-                      margin-bottom: 16px;
-                    "
-                  >
-                    Hi
-                    <?= senderFirstName ?>,<br /><br />
-
-                    This is just a reminder that you have chosen to skip sending your <em>valuetales</em> book to
-                    <?= recipientFirstName ?>
-                    <?= recipientLastName ?>
-                    as a PDF this week.<br /><br />
-
-                    Your recipient is expecting a book to be sent as a PDF this week. Consider reaching out to them to
-                    let them know the status of their book.<br /><br />
-
-                    Cheers,<br />
-
-                    - The <em>valuetales</em> team on behalf of
+                    - <em>valuetales</em> on behalf of
                     <?= senderFirstName ?>
                     <?= senderLastName ?>.
                   </p>
@@ -406,25 +385,20 @@
 
                     You entered an invalid value for the parameter <b>googleDocLinkOverride</b>.<br /><br />
 
-                    <b>googleDocLinkOverride</b> can be set to three options. Setting this value to "auto" will
-                    automatically build and send the book without your review. Setting this value to "skip" will skip
-                    sending the book to your recipient and leave this process for you to do manually. Setting this value
-                    to to a Google Doc link will use that Google Doc instead of the auto-generated one.<br /><br />
-
                     A possible scenario is that you entered an invalid Google Doc link that either does not exist or is
                     not in the correct format. Here's an example of a Google Doc link in the correct format:<br /><br />
 
                     "https://docs.google.com/document/d/1234567890abcdefghijklmnopqrstuvwxyz_a1b2c3/edit".<br /><br />
 
                     Fix the invalid value for <b>googleDocLinkOverride</b> and manually rerun the function
-                    <b>askQuestions()</b> within the week to send your <em>valuetales</em> book to
+                    <b>weeklyEmail()</b> within the week to send your <em>valuetales</em> book to
                     <?= recipientFirstName ?>
                     <?= recipientLastName ?>
                     as a PDF.<br /><br />
 
                     Cheers,<br />
 
-                    - The <em>valuetales</em> team on behalf of
+                    - <em>valuetales</em> on behalf of
                     <?= senderFirstName ?>
                     <?= senderLastName ?>.
                   </p>
@@ -443,12 +417,18 @@
 
                     This is a reminder to disable the <em>valuetales</em> service as it has come to a completion.<br /><br />
 
-                    Turn off any weekly triggers set in your Apps Script project and disable this third-party apps
+                    Turn off any weekly triggers set in your
+                    <a href="https://script.google.com/">Apps Script</a> project and disable this third-party apps
                     access to your Google Account.<br /><br />
+
+                    When you feel comfortable with deleting your Google Forms questions and responses the function
+                    <b>deleteForms()</b> is provided to quickly delete all valuetales Google Forms. If you setup image
+                    submissions the function <b>deleteImageSubmissionFolders()</b> is provided to help with deleting all
+                    the image submission folders in Google Drive<br /><br />
 
                     Cheers,<br />
 
-                    - The <em>valuetales</em> team on behalf of
+                    - <em>valuetales</em> on behalf of
                     <?= senderFirstName ?>
                     <?= senderLastName ?>.
                   </p>
@@ -483,7 +463,7 @@
                     valign="top"
                     align="center"
                   >
-                    A
+                    An
                     <a
                       href="https://github.com/johnprovazek/valuetales"
                       style="color: #9a9ea6; font-size: 16px; text-align: center; text-decoration: underline"
